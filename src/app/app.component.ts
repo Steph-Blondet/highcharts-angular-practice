@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { getChartData } from './data/highcharts-data'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  chartData: any;
+
+  constructor(){
+    this.chartData = getChartData;
+  }
 }
